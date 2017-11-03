@@ -1,7 +1,3 @@
-
-
-
-
 public abstract class Persona
 {
    
@@ -25,7 +21,7 @@ public abstract class Persona
     }
     /**
      * 
-     * @return 
+     * @return retorna el identificador de la persona
      */
     public String getId()
     {
@@ -33,7 +29,7 @@ public abstract class Persona
     }
     /**
      * 
-     * @return 
+     * @return retorna el nom de la persona
      */
     public String getNombre()
     {
@@ -41,7 +37,7 @@ public abstract class Persona
     }
     /**
      * 
-     * @return 
+     * @return retorna els cognoms de la persona
      */
     public String getApellidos()
     {

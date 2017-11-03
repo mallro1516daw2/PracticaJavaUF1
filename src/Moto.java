@@ -19,7 +19,7 @@
     // getters
     /**
      * 
-     * @return 
+     * @return retorna el % de bateria que li queda a la moto
      */
     public double getBattery()
     {
@@ -27,7 +27,7 @@
     }
     /**
      * 
-     * @return 
+     * @return retorna el model de la moto
      */
     @Override
     public String getModel()
@@ -36,7 +36,7 @@
     }
     /**
      * 
-     * @return 
+     * @return retorna el numero de seients de la moto que sempre son 2
      */
     @Override
     public int getNumSeats()

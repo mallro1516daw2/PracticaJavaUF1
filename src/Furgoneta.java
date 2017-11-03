@@ -1,15 +1,13 @@
   public class Furgoneta extends Vehicle
   {
-  
-    private String model;
+      private String model;
     private int numSeats;
     private final boolean gps;
     private final boolean aire;     
     
     // constructor
     /**
-     * 
-     * @param model
+     * @param model 
      * @param kilometraje
      * @param numSeats
      * @param matricula

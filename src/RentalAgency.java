@@ -69,8 +69,8 @@ public class RentalAgency
     }
 /**
  * 
- * @param type 
- * @return 
+ * @param type Parametre del tipus de vehicle que vols veure el cost
+ * @return retorna la tarifa de preus segons el tipus de vehicle
  */
     public String getVehicleCost(int type)
     {    
@@ -79,7 +79,7 @@ public class RentalAgency
 
     // private supporting methods
     /**
-     * 
+     * Entra els diferents preus per tipus de vehicle i tarifes
      */
     private void populateVehicleCosts()
     {
@@ -88,7 +88,7 @@ public class RentalAgency
        	vehicleCosts[2] = new VehicleCost(30.00, 200.00, 55.00); //Moto
     }
 /**
- * 
+ * Entra els diferents vehicles, amb el seu Model, Kilometratge, Matricula, GPS y Aire acondicionat en aquest ordre
  */
     private void populateVehicles()
     {
@@ -109,9 +109,9 @@ public class RentalAgency
 
 /**
  * 
- * @param type
- * @param className
- * @return 
+ * @param type integer amb tipus de vehicle seleccionat
+ * @param className tipus de vehicle en forma de String
+ * @return retorna el tipus de vehicle en forma de String o false en cas de que no seleccionis un tipus de vehicle correcte
  */
     private boolean matchingVehicleType(int type, String className)
     {
@@ -126,9 +126,9 @@ public class RentalAgency
 
 /**
  * 
- * @param matricula
- * @return
- * @throws VehicleNotFoundException 
+ * @param matricula matricula del vehicle selecionat 
+ * @return retorna el numero en la llista del vehicle seleccionat segons la seva matricula
+ * @throws VehicleNotFoundException en cas de que la matricula sigui incorrecta
  */
     private int findVehicle(String matricula) throws VehicleNotFoundException
     {     

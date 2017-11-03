@@ -1,6 +1,6 @@
   public class Cliente extends Persona
   {
-    private String reservas;      
+    private int reservas;      
     
     // constructor
     /**
@@ -10,7 +10,7 @@
      * @param apellidos
      * @param reservas 
      */
-    public Cliente (String nombre, String id, String apellidos, String reservas)
+    public Cliente (String nombre, String id, String apellidos, int reservas)
     {
     	super(id, nombre, apellidos);
 	this.reservas = reservas;
@@ -20,9 +20,9 @@
     // getters
     /**
      * 
-     * @return 
+     * @return retorna el numero de reservas que ha fet el client 
      */
-    public String getReservas()
+    public int getReservas()
     {
        return reservas;
     }
