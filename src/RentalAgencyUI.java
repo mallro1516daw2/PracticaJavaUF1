@@ -1,10 +1,7 @@
-
 import Exceptions.VehicleNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-//----------------------------------------------------------
-//  RentalAgencyUI
-//----------------------------------------------------------
+
 public class RentalAgencyUI 
 {
     // instance variables
@@ -12,12 +9,19 @@ public class RentalAgencyUI
     Scanner input = new Scanner(System.in);
     
     // constructor
+    /**
+     * 
+     * @param a 
+     */
     public RentalAgencyUI(RentalAgency a) 
     {
         agency = a;
     }
     
     // general methods
+    /**
+     * 
+     */
     public void Start()
     {   int selection;
 
@@ -35,7 +39,9 @@ public class RentalAgencyUI
         }
         while (selection != 6);
     }
-    
+    /**
+     * 
+     */
     private void DisplayMenu()
     {
 	System.out.println("\nElige uno de los siguientes:");
@@ -48,7 +54,10 @@ public class RentalAgencyUI
 	System.out.println("6 - Salir");
         System.out.print("\nSeleccion: ");
     }
-    
+    /**
+     * 
+     * @param cmd 
+     */
     private void Execute(int cmd)
     {
         int type;
@@ -106,7 +115,9 @@ public class RentalAgencyUI
                 
     }
 
-
+/**
+ * 
+ */
     private void displayVehicleTypes()
     {
 	System.out.println("\nTipos de vehiculo");
@@ -115,7 +126,10 @@ public class RentalAgencyUI
      	System.out.println("2 - Furgonetas");
         System.out.println("3 - Moto");
     }
-        
+    /**
+     * 
+     * @param type 
+     */  
     private void displayVehicleCost(int type)
     {
 	System.out.println();  // skip line
@@ -124,7 +138,10 @@ public class RentalAgencyUI
         System.out.println(agency.getVehicleCost(type));
 	System.out.println(); // skip line
     }	
-    
+    /**
+     * 
+     * @param type 
+     */
     private void displayAvailVehicles(int type)
     {
         ArrayList<String> vehicles;
@@ -134,7 +151,11 @@ public class RentalAgencyUI
 	System.out.println(vehicles);
 
     }
-
+/**
+ * 
+ * @param type
+ * @return 
+ */
     private String VehicleTypeName(int type)
     {
 	switch (type)

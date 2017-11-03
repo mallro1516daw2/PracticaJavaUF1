@@ -1,8 +1,3 @@
-
-
-//----------------------------------------------------------
-//  VehicleCost Class
-//----------------------------------------------------------
 public class VehicleCost
 {
     // instance variables
@@ -11,6 +6,12 @@ public class VehicleCost
     private double weekendCost;
 
     // constructor
+    /**
+     * 
+     * @param daily parametre del preu per dia per defecte
+     * @param weekly parametre del preu de una setmana sencera
+     * @param weekend paramertre del preu de un cap de setmana
+     */
     public VehicleCost (double daily, double weekly, double weekend)
     {  
  	dailyCost = daily;
@@ -19,6 +20,10 @@ public class VehicleCost
     }
   
     // getters
+    /**
+     * 
+     * @return Retorna un String amb un text del cost del tipus de vehicle elegit
+     */
     public String getVehicleCost()
     {
    	return "Por dia: $" + Double.toString(dailyCost) + " Semanal: $" + 

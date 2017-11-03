@@ -9,6 +9,7 @@ public class RentalAgency
     private Vehicle vehicles[] = new Vehicle[13];
 
     // constructor
+    
     public RentalAgency()
     {
       	populateVehicleCosts();
@@ -16,6 +17,11 @@ public class RentalAgency
     }
 
     // general methods
+    /**
+     * 
+     * @param type
+     * @return 
+     */
     public ArrayList<String> getAvailVehicles(int type)
     {
        ArrayList<String> availVehicles = new ArrayList<>();
@@ -36,6 +42,11 @@ public class RentalAgency
        }
        return availVehicles;
     }
+    /**
+     * 
+     * @param matricula
+     * @throws VehicleNotFoundException 
+     */
     public void reserveVehicle(String matricula) throws VehicleNotFoundException
     {    
    	int loc;
@@ -44,7 +55,11 @@ public class RentalAgency
       	if (loc != -1)
            vehicles[loc].reserveVehicle();
     }
-
+/**
+ * 
+ * @param matricula Numero int de la matricula
+ * @throws VehicleNotFoundException quan no troba el vehicle
+ */
     public void unreserveVehicle(String matricula) throws VehicleNotFoundException
     { 	int loc;
 
@@ -52,20 +67,29 @@ public class RentalAgency
       	if (loc != -1)
            vehicles[loc].unreserveVehicle();
     }
-
+/**
+ * 
+ * @param type 
+ * @return 
+ */
     public String getVehicleCost(int type)
     {    
        	return vehicleCosts[type-1].getVehicleCost();
     }
 
     // private supporting methods
+    /**
+     * 
+     */
     private void populateVehicleCosts()
     {
        	vehicleCosts[0] = new VehicleCost(24.95, 149.95, 44.95);  // Turismo
        	vehicleCosts[1] = new VehicleCost(29.95, 189.95, 54.95);  // Furgoneta
        	vehicleCosts[2] = new VehicleCost(30.00, 200.00, 55.00); //Moto
     }
-
+/**
+ * 
+ */
     private void populateVehicles()
     {
 	vehicles[0] = new Turismo("Ford Focus", 35, "GF1TG6", false, false);
@@ -83,7 +107,12 @@ public class RentalAgency
 	vehicles[12] = new Moto("Subaru 1234 JK", 17, "JK3FT3");
     }
 
-
+/**
+ * 
+ * @param type
+ * @param className
+ * @return 
+ */
     private boolean matchingVehicleType(int type, String className)
     {
      	switch(type)
@@ -95,7 +124,12 @@ public class RentalAgency
         return false;
     }      
 
-
+/**
+ * 
+ * @param matricula
+ * @return
+ * @throws VehicleNotFoundException 
+ */
     private int findVehicle(String matricula) throws VehicleNotFoundException
     {     
       for (int i = 0; i < 14; i++)
