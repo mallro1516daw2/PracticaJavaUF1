@@ -1,7 +1,5 @@
-
 import Exceptions.VehicleNotFoundException;
 import java.util.ArrayList;
-
 
 
 public class RentalAgency 
@@ -20,7 +18,7 @@ public class RentalAgency
     // general methods
     public ArrayList<String> getAvailVehicles(int type)
     {
-       ArrayList<String> availVehicles = new ArrayList<String>();
+       ArrayList<String> availVehicles = new ArrayList<>();
        Class c;
        String className;
 
@@ -31,9 +29,10 @@ public class RentalAgency
           
           c = vehicles[i].getClass();
           className = c.getName();
-
-          if (matchingVehicleType(type,className))
-             availVehicles.add(vehicles[i].getVehicleInfo() + Character.toString('\n'));
+           if (type==3)//if type==3 es Moto por lo tal el cliente necesita la ubicacion
+             availVehicles.add(vehicles[i].getVehicleInfo() + "Ubicacion: X" +vehicles[i].getX()+" Y "+ vehicles[i].getY()+ Character.toString('\n'));
+           else//si no es moto entonces el cliente no la necesita
+            availVehicles.add(vehicles[i].getVehicleInfo() + Character.toString('\n'));
        }
        return availVehicles;
     }
@@ -58,8 +57,6 @@ public class RentalAgency
     {    
        	return vehicleCosts[type-1].getVehicleCost();
     }
-
-    
 
     // private supporting methods
     private void populateVehicleCosts()

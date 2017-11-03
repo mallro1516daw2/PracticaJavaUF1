@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 //----------------------------------------------------------
 //  Vehicle Class
 //----------------------------------------------------------
@@ -15,7 +7,8 @@ public abstract class Vehicle
     private int kilometraje;
     private final String matricula;
     private boolean reserved;
-    
+    private double x;
+    private double y;
     
     // constructor
     public Vehicle (int kilometraje, String matricula )
@@ -41,7 +34,15 @@ public abstract class Vehicle
     {
        return kilometraje;
     }
-    
+    public double getX()
+    {
+       return x;
+    }
+
+    public double getY()
+    {
+       return y;
+    }
     public abstract int getNumSeats();
 
     public String getMatricula()
@@ -70,4 +71,5 @@ public abstract class Vehicle
     {
         reserved = false; 
     }
+    
 }

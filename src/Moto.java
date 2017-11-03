@@ -1,16 +1,7 @@
-
-
-
-
-
-
-
   public class Moto extends Vehicle
   {
    
     private final String model;
-    private double x;
-    private double y;
     private int battery;
     
     // constructor
@@ -20,15 +11,7 @@
 	this.model = model;  	
     }
     // getters
-    public double getX()
-    {
-       return x;
-    }
-
-    public double getY()
-    {
-       return y;
-    }
+    
     public double getBattery()
     {
        return battery;
