@@ -19,8 +19,8 @@ public class RentalAgency
     // general methods
     /**
      * 
-     * @param type
-     * @return 
+     * @param type Parametre amb el tipus de vehicle 
+     * @return retorna tots els vehicles segons el tipus que sigui en forma de ArrayLists
      */
     public ArrayList<String> getAvailVehicles(int type)
     {
@@ -44,8 +44,8 @@ public class RentalAgency
     }
     /**
      * 
-     * @param matricula
-     * @throws VehicleNotFoundException 
+     * @param matricula Parametre matricula del vehicle que volem reservar
+     * @throws VehicleNotFoundException en caso de que no encuentre el vehiculo salta la excepcion
      */
     public void reserveVehicle(String matricula) throws VehicleNotFoundException
     {    
@@ -57,7 +57,7 @@ public class RentalAgency
     }
 /**
  * 
- * @param matricula Numero int de la matricula
+ * @param matricula Parametre matricula del vehicle  que volem cancelar la reserva
  * @throws VehicleNotFoundException quan no troba el vehicle
  */
     public void unreserveVehicle(String matricula) throws VehicleNotFoundException

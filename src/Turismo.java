@@ -9,11 +9,11 @@
     // constructor
     /**
      * 
-     * @param model
-     * @param kilometraje
-     * @param matricula
-     * @param gps
-     * @param aire 
+     * @param model parametre String amb el model de turisme
+     * @param kilometraje parametre integer amb el numero de kilometres recorregut
+     * @param matricula parametre String amb la matricula del turisme
+     * @param gps parametre boolean de si té o no GPS el turisme
+     * @param aire parametre boolean de si té o no aire acondicionat el turisme
      */
     public Turismo (String model, int kilometraje, String matricula, boolean gps, boolean aire)
     {

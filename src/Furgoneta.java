@@ -7,12 +7,12 @@
     
     // constructor
     /**
-     * @param model 
-     * @param kilometraje
-     * @param numSeats
-     * @param matricula
-     * @param gps
-     * @param aire 
+     * @param model parametre string amb el model
+     * @param kilometraje parametre integer amb el kilometres que  ha fet la furgoneta
+     * @param numSeats parametre integer amb el numero de seients
+     * @param matricula parametre string amb la matricula de la furgoneta
+     * @param gps parametre boolea si te o no gps
+     * @param aire parametre boolea si te o no aire
      */
     public Furgoneta (String model, int kilometraje, int numSeats, String matricula, boolean gps, boolean aire)
     {
@@ -26,7 +26,7 @@
     // getters
     /**
      * 
-     * @return 
+     * @return retorna el model de coche
      */
     @Override
     public String getModel()
@@ -35,7 +35,7 @@
     }
     /**
      * 
-     * @return 
+     * @return retorna el numero de seients de la furgoneta
      */
     @Override
     public int getNumSeats()
@@ -44,7 +44,7 @@
     }
     /**
      * 
-     * @return 
+     * @return Retorna si té o no GPS
      */
      @Override
     public boolean getGps()
@@ -53,7 +53,7 @@
     }
     /**
      * 
-     * @return 
+     * @return retorna si té o no airee acondicionat
      */
     @Override
     public boolean getAire()

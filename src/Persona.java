@@ -9,9 +9,9 @@ public abstract class Persona
     // constructor
     /**
      * 
-     * @param id
-     * @param nombre
-     * @param apellidos 
+     * @param id parametre Sting amb el DNI de la persona
+     * @param nombre parametre String amb el nom de la persona
+     * @param apellidos parametre String amb els cognoms de la persona
      */
     public Persona (String id, String nombre, String apellidos )
     {  

@@ -5,10 +5,10 @@
     // constructor
     /**
      * 
-     * @param nombre
-     * @param id
-     * @param apellidos
-     * @param reservas 
+     * @param nombre parametre String amb el nom del client
+     * @param id parametre String amb el DNI del client
+     * @param apellidos parametre String amb els cognoms del client
+     * @param reservas parametre integer amb el numero de reserves fetes
      */
     public Cliente (String nombre, String id, String apellidos, int reservas)
     {
