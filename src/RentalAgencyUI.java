@@ -225,7 +225,7 @@ public class RentalAgencyUI
         }  
         return " ";       
     }
-
+/*
     public void Login(int status) {
         
     }
@@ -244,5 +244,5 @@ public class RentalAgencyUI
             ExecuteC(status);
         }
         while (status != 2);
-    }
+    }*/
 }
