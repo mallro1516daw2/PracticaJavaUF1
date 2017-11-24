@@ -138,4 +138,8 @@ public class RentalAgency
       throw new VehicleNotFoundException();
         
     }
+
+    void addVehicle(String matricula) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

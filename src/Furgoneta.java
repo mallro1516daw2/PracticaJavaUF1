@@ -1,6 +1,6 @@
   public class Furgoneta extends Vehicle
   {
-      private String model;
+    private String model;
     private int numSeats;
     private final boolean gps;
     private final boolean aire;     
