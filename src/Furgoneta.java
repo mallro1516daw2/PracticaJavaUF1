@@ -1,6 +1,6 @@
   public class Furgoneta extends Vehicle
   {
-    private String model;
+    
     private int numSeats;
     private final boolean gps;
     private final boolean aire;     
@@ -16,8 +16,7 @@
      */
     public Furgoneta (String model, int kilometraje, int numSeats, String matricula, boolean gps, boolean aire)
     {
-    	super(kilometraje, matricula);
-	this.model = model;
+    	super(model,kilometraje, matricula);
    	this.numSeats = numSeats;
       	this.gps = gps;
         this.aire = aire;
@@ -28,11 +27,7 @@
      * 
      * @return retorna el model de coche
      */
-    @Override
-    public String getModel()
-    {
-       return model;
-    }
+  
     /**
      * 
      * @return retorna el numero de seients de la furgoneta

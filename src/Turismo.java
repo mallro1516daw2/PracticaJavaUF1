@@ -2,7 +2,7 @@
   public class Turismo extends Vehicle
   {
     // instance variables
-    private final String model;
+   
     private final boolean gps;
     private final boolean aire;
 
@@ -17,8 +17,7 @@
      */
     public Turismo (String model, int kilometraje, String matricula, boolean gps, boolean aire)
     {
-      	super(kilometraje, matricula);
-	this.model = model;
+      	super(model, kilometraje, matricula);
         this.gps = gps;
         this.aire = aire;
               
@@ -29,11 +28,7 @@
      * 
      * @return 
      */
-    @Override
-    public String getModel()
-    {
-       	return model;
-    }
+    
     /**
      * 
      * @return 

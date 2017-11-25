@@ -1,7 +1,7 @@
   public class Moto extends Vehicle
   {
    
-    private final String model;
+   
     private int battery;
     
     // constructor
@@ -13,8 +13,7 @@
      */
     public  Moto (String model, int kilometraje, String matricula )
     {
-      	super(kilometraje, matricula);
-	this.model = model;  	
+      	super(model,kilometraje, matricula);
     }
     // getters
     /**
@@ -29,11 +28,7 @@
      * 
      * @return retorna el model de la moto
      */
-    @Override
-    public String getModel()
-    {
-       	return model;
-    }
+    
     /**
      * 
      * @return retorna el numero de seients de la moto que sempre son 2

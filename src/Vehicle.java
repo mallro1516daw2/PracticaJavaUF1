@@ -7,6 +7,8 @@ public abstract class Vehicle
     private boolean reserved;
     private double x;
     private double y;
+    private final String model;
+    
     
     // constructor
     /**
@@ -14,10 +16,11 @@ public abstract class Vehicle
      * @param kilometraje parametre integer de kilometres recorreguts
      * @param matricula parametre String de la atricula del cotxe
      */
-    public Vehicle (int kilometraje, String matricula )
+    public Vehicle (String model, int kilometraje, String matricula )
     {  
     	this.kilometraje = kilometraje;
      	this.matricula = matricula;
+        this.model = model;
     }
   /**
    * 
@@ -25,7 +28,7 @@ public abstract class Vehicle
    */
     public String getModel()
     {
-      return "";
+      return model;
     }
     /**
      * 
