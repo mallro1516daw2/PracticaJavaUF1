@@ -35,10 +35,13 @@ public class RentalAgency
           
           c = vehicles[i].getClass();
           className = c.getName();
+          if (matchingVehicleType(type,className))
+          {
            if (type==3)//if type==3 es Moto por lo tal el cliente necesita la ubicacion
              availVehicles.add(vehicles[i].getVehicleInfo() + "Ubicacion: X" +vehicles[i].getX()+" Y "+ vehicles[i].getY()+ Character.toString('\n'));
            else//si no es moto entonces el cliente no la necesita
             availVehicles.add(vehicles[i].getVehicleInfo() + Character.toString('\n'));
+          }
        }
        return availVehicles;
     }
