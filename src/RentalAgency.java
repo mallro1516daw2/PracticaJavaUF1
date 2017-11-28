@@ -1,3 +1,7 @@
+
+
+
+
 import Exceptions.VehicleNotFoundException;
 import java.util.ArrayList;
 
@@ -135,7 +139,7 @@ public class RentalAgency
  */
     private int findVehicle(String matricula) throws VehicleNotFoundException
     {     
-      for (int i = 0; i < 14; i++)
+      for (int i = 0; i < 13; i++)
         if (vehicles[i].getMatricula().equals(matricula))
           return i;
       throw new VehicleNotFoundException();

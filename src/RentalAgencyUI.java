@@ -1,8 +1,11 @@
+
+
 import Exceptions.VehicleNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import persona.Login;
 
-public class RentalAgencyUI 
+public class RentalAgencyUI implements Login
 {
     // instance variables
     private RentalAgency agency;
@@ -26,6 +29,7 @@ public class RentalAgencyUI
     {   int selection;
         System.out.println("\n\nBienvenido a la Agencia");
 	System.out.println("=================================================");
+        Login();
         do
         {
             DisplayMenu();
@@ -36,6 +40,7 @@ public class RentalAgencyUI
               System.out.println("** Te has equivocado de numero, prueba otra vez **");
         }
         while (selection != 6);
+        
     }
     /**
      * 
@@ -110,6 +115,7 @@ public class RentalAgencyUI
                     }
                     System.out.println("## Reserva cancelada correctamente ##");
                     break;
+            case 6 :Exit();
         }
     }
     
@@ -171,6 +177,8 @@ public class RentalAgencyUI
                     agency.addVehicle(matricula);
                     System.out.println("## Coche añadido correctamente ##");
                     break;
+            case 7: Exit();
+                    break;
         }
     }
 
@@ -225,24 +233,26 @@ public class RentalAgencyUI
         }  
         return " ";       
     }
-/*
-    public void Login(int status) {
-        
-    }
 
-    void Login() {
-        int status;
-        do
-        {
+
+    @Override
+    public void Login() {
+        int election;
+        
             System.out.println("\n Ets client(1) o empleat(2)?");
-            DisplayMenu();
-            status = input.nextInt();
-            if (status == 2)
-	      ExecuteE(status);
+            election = input.nextInt();
+            if (election == 2)
+	      ExecuteE(election);
             else
               System.out.println("** Eres un cliente **");
-            ExecuteC(status);
-        }
-        while (status != 2);
-    }*/
+            ExecuteC(election);
+       
+       
+    }
+
+    @Override
+    public void Exit() {
+        System.out.println("\n ADIOS");
+        System.exit(0);
+    }
 }

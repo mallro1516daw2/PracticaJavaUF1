@@ -1,3 +1,7 @@
+
+
+
+
 public class VehicleCost
 {
     // instance variables
@@ -12,7 +16,7 @@ public class VehicleCost
      * @param weekly parametre del preu de una setmana sencera
      * @param weekend paramertre del preu de un cap de setmana
      */
-    public VehicleCost (double daily, double weekly, double weekend)
+    protected VehicleCost (double daily, double weekly, double weekend)
     {  
  	dailyCost = daily;
       	weeklyCost = weekly;
@@ -24,7 +28,7 @@ public class VehicleCost
      * 
      * @return Retorna un String amb un text del cost del tipus de vehicle elegit
      */
-    public String getVehicleCost()
+    protected String getVehicleCost()
     {
    	return "Por dia: $" + Double.toString(dailyCost) + " Semanal: $" + 
                 weeklyCost + " Fin de semana: $" + weekendCost;

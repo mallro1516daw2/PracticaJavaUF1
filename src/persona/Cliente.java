@@ -1,3 +1,5 @@
+package persona;
+
   public class Cliente extends Persona
   {
     private int reservas;      
@@ -26,6 +28,8 @@
     {
        return reservas;
     }
+
+   
 
     
 }
